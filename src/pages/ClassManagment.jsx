@@ -15,7 +15,7 @@
 import React, { useState } from "react";
 import ClassList from "../components/ClassManagment/ClassList";
 import ClassDetails from "../components/ClassManagment/ClassDetails";
-import UnitManagement from "../components/ClassManagment/UnitManagement";
+import UnitManagement from "../components/ClassManagment/Unitmanagement";
 import SessionManagement from "../components/ClassManagment/SessionManagment";
 
 const ClassManagementPage = () => {
