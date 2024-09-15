@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import MainContent from './components/main/main';
+// import MainContent from './components/main/main';
 import Footer from './components/Footer/Footer';
 import Home from './pages/Homepage';
 import LoginPage from './pages/Login';
@@ -11,6 +11,8 @@ import TeacherPage from './pages/TeacherPage';
 import CreateClass from './components/class/CreateClass';
 import UpdateClass from './components/class/UpdateClass';
 import DeleteClass from './components/class/DeleteClass';
+import Student from './pages/Student';
+import AdminPage from './pages/AdminPage';
 
 
 const App = () => {
@@ -20,6 +22,9 @@ const App = () => {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/teacher" element={<TeacherPage />} />
+          <Route path='/student' element={<Student/>}></Route>
+          <Route path='/admin' element={<AdminPage/>}></Route>
+
           <Route path="/create-class" element={<CreateClass />} />
           <Route path="/update-class" element={<UpdateClass />} />
           <Route path="/delete-class" element={<DeleteClass />} />

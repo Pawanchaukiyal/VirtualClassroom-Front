@@ -8,7 +8,9 @@ import image1 from '../../assets/image1.jpg';
 import image2 from '../../assets/image2.jpg';
 import image3 from '../../assets/image3.jpg';
 
+import {useNavigate } from 'react-router-dom';
 const Hero = () => {
+  const navigate = useNavigate();
   // Settings for the carousel
   const settings = {
     dots: true,
@@ -36,7 +38,7 @@ const Hero = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40 text-white text-center p-6 md:p-8 lg:p-10">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Learn and Grow</h2>
             <p className="text-base md:text-lg lg:text-xl mb-6">Join our community and enhance your skills.</p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm md:text-base lg:text-lg">Explore More</button>
+            {/* <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm md:text-base lg:text-lg">Explore More</button> */}
           </div>
         </div>
         <div className="relative w-full h-full">
@@ -44,7 +46,10 @@ const Hero = () => {
           <div className="absolute inset-0 flex flex-col justify-center items-center bg-black bg-opacity-40 text-white text-center p-6 md:p-8 lg:p-10">
             <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold mb-4">Join Us Today</h2>
             <p className="text-base md:text-lg lg:text-xl mb-6">Become a part of our vibrant community.</p>
-            <button className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm md:text-base lg:text-lg">Sign Up</button>
+            <button 
+              className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded text-sm md:text-base lg:text-lg" 
+              onClick={() => navigate('/register')} 
+            >Sign Up</button>
           </div>
         </div>
       </Slider>
